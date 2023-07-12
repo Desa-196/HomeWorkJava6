@@ -1,18 +1,18 @@
 public class Notebook{
     private int sizeMainMemory;  
     private int sizeHardDrive;  
-    private int diagonal;  
+    private float diagonal;  
     private int price;  
     private String processor;  
     private String model;  
     private String brand;  
     private String os; 
-    public void Notebook(String brand, String model, int price){
+    public  Notebook(String brand, String model, int price){
         this.brand = brand;
         this.model = model;
         this.price = price;
     }
-    public void Notebook(String brand, String model, int price, int sizeMainMemory, int sizeHardDrive, int diagonal, String processor, String os){
+    public  Notebook(String brand, String model, int price, int sizeMainMemory, int sizeHardDrive, float diagonal, String processor, String os){
         this.brand = brand;
         this.model = model;
         this.price = price;
@@ -28,7 +28,7 @@ public class Notebook{
     public int getSizeHardDrive(){
         return sizeHardDrive;
     }
-    public int getDiagonal(){
+    public float getDiagonal(){
         return diagonal;
     }
     public int getPrice(){
@@ -46,4 +46,9 @@ public class Notebook{
     public String getOs(){
         return os;
     }
+    @Override
+    public String toString(){
+        return "Производитель: " + brand + ", Модель: " + model + ", Стоимость: " + price + ", Процессор: " + processor;
+    }
+
 }
